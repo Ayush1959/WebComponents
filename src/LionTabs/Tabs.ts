@@ -1,10 +1,11 @@
 //@ts-ignore
 import { LionTabs } from "@lion/ui/tabs.js";
 import { css } from "lit";
-import { queryAll, state } from "lit/decorators.js";
+import { customElement, queryAll, state } from "lit/decorators.js";
 import { ColorModeMixin } from "../Mixins/ColorModeMixin";
 
-//@ts-ignore@customElement("custom-lion-tabs")
+//@ts-ignore
+@customElement("custom-lion-tabs")
 export class MyTabs extends ColorModeMixin(LionTabs) {
   static get styles() {
     return [
