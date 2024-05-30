@@ -1,0 +1,1 @@
+{"version":3,"file":"simple-button.d.ts","sourceRoot":"","sources":["../src/simple-button.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAa,MAAM,uBAAuB,CAAC;AAG9D,qBACa,YAAa,SAAQ,UAAU;IAC1C,OAAgB,MAAM,oDAIpB;IAGF,IAAI,CAAC,EAAE,MAAM,CAAW;IAEf,MAAM;CAGhB;AAED,OAAO,CAAC,MAAM,CAAC;IACb,UAAU,qBAAqB;QAC7B,eAAe,EAAE,YAAY,CAAC;KAC/B;CACF"}

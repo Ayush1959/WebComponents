@@ -1,0 +1,1 @@
+{"version":3,"file":"counter-element.d.ts","sourceRoot":"","sources":["../src/counter-element.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAa,MAAM,KAAK,CAAC;AAG5C,cACM,cAAe,SAAQ,UAAU;IACM,KAAK,SAAK;IAErD,OAAgB,MAAM,0BAIpB;IAEO,MAAM;IAOf,SAAS;CAGV;AAED,OAAO,CAAC,MAAM,CAAC;IACb,UAAU,qBAAqB;QAC7B,iBAAiB,EAAE,cAAc,CAAC;KACnC;CACF"}

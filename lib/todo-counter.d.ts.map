@@ -1,0 +1,1 @@
+{"version":3,"file":"todo-counter.d.ts","sourceRoot":"","sources":["../src/todo-counter.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAQ,MAAM,uBAAuB,CAAC;AAGzD,qBACa,WAAY,SAAQ,UAAU;IACb,cAAc,SAAK;IACnB,cAAc,SAAK;IAEtC,MAAM;CAchB;AAED,OAAO,CAAC,MAAM,CAAC;IACb,UAAU,qBAAqB;QAC7B,cAAc,EAAE,WAAW,CAAC;KAC7B;CACF"}
