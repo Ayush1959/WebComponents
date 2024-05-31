@@ -1,15 +1,12 @@
-//@ts-ignore
 import { LionTabs } from "@lion/ui/tabs.js";
 import { css } from "lit";
 import { customElement, queryAll, state } from "lit/decorators.js";
-import { ColorModeMixin } from "../Mixins/ColorModeMixin";
-
-//@ts-ignore
+import { ModeMixin } from "../Mixins/ModeMixin";
 @customElement("custom-lion-tabs")
-export class MyTabs extends ColorModeMixin(LionTabs) {
+export class MyTabs extends ModeMixin(LionTabs) {
   static get styles() {
     return [
-      super.styles,
+      ...super.styles,
       css`
         :host {
           display: block;
@@ -93,21 +90,16 @@ export class MyTabs extends ColorModeMixin(LionTabs) {
     this.updateLinePosition = this.updateLinePosition.bind(this);
   }
   updateLinePosition(e: any) {
-    console.log("first", e);
     this.width = e.srcElement.offsetWidth;
     this.x = e.srcElement.offsetLeft - this.offsetLeft;
-    console.log(this);
-    console.log(this.width);
-    console.log(this.x);
     this.style.setProperty("--line-width", this.width + "px");
     this.style.setProperty("--line-left", this.x + "px");
   }
-  // @ts-ignore
   @queryAll("slot[name=tab]")
   tabButtons: any;
 
-  firstUpdated() {
-    super.firstUpdated();
+  firstUpdated(_changedProperties: any) {
+    super.firstUpdated(_changedProperties);
     this.tabButtons.forEach((element: any) => {
       element.addEventListener("click", this.updateLinePosition);
     });
