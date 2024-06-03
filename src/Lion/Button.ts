@@ -64,7 +64,7 @@ export class MyButton extends ModeMixin(LionButton) {
     }
 
     // return parent if it has surfaceValues otherwise recursively call findParentWithSurfaceMixin
-    return parent.hasAttribute("surface") && parent?.isSurface
+    return parent?.isSurface
       ? parent.getAttribute("surface")
       : MyButton.findParentWithSurfaceMixin(parent);
   };

@@ -1,10 +1,11 @@
-import { customElement, property } from "lit/decorators.js";
+import { customElement } from "lit/decorators.js";
 
-import { LitElement, css, html } from "./../../node_modules/lit";
+import { SurfaceMixin } from "../Mixins/SurfaceMixin";
+import { css, html } from "./../../node_modules/lit";
 
 @customElement("custom-surface")
-export class CustomSurface extends LitElement {
-  static override styles = css`
+export class CustomSurface extends SurfaceMixin() {
+  static styles = css`
     :host {
       justify-content: center;
       align-items: center;
@@ -16,12 +17,6 @@ export class CustomSurface extends LitElement {
       color: black;
     }
   `;
-
-  @property({ type: Boolean, reflect: true })
-  isSurface = true;
-
-  @property({ reflect: true })
-  surface = "default";
 
   override render() {
     return html`<slot></slot>`;
