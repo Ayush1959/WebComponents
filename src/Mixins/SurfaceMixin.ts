@@ -5,7 +5,7 @@ type SurfaceType = "default" | "light" | "heavy";
 type Constructor<T = {}> = new (...args: any[]) => T;
 
 export type SurfaceMixinType<T extends Constructor<LitElement>> = T &
-  Constructor<{ mode: SurfaceType }>;
+  Constructor<{ surface: SurfaceType }>;
 
 export const SurfaceMixin = <T extends Constructor<LitElement>>() => {
   class SurfaceClass extends LitElement {
