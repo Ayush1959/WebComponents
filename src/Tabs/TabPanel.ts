@@ -3,8 +3,7 @@ import { property } from "lit/decorators.js";
 
 class TabPanel extends LitElement {
   @property({ reflect: true })
-  slotName = "panel";
-
+  slotName = "tab-panel";
   static styles = css`
     :host {
       color: blue;
@@ -12,7 +11,7 @@ class TabPanel extends LitElement {
     }
   `;
   render() {
-    return html` <slot> </slot> `;
+    return html`<slot></slot>`;
   }
 }
 
