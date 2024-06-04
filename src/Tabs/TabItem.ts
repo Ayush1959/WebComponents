@@ -1,53 +1,25 @@
-import { LionTabs } from "@lion/ui/tabs.js";
-import { html } from "lit";
-import { property } from "lit/decorators.js";
-//@ts-ignore
-class TabItem extends LionTabs {
-  @property({ type: Boolean, reflect: true })
-  selected = false;
-
-  @property({ reflect: true })
-  slotName = "tab-item";
-
-  // static styles = css`
-  //   :host {
-  //     color: red;
-  //     margin: 20px;
-  //     cursor: pointer;
-  //   }
-  //   :host([selected]) {
-  //     color: green;
-  //   }
-  // `;
-  constructor() {
-    super();
-  }
-  firstUpdated(changedProperties: any) {
-    super.firstUpdated(changedProperties);
-    this.__setupSlots();
-  }
-
-  __setupSlots() {
-    if (this.shadowRoot) {
-      const tabSlot = this.shadowRoot.querySelector("slot[data-slotName=tab]");
-      const handleSlotChange = () => {
-        //@ts-ignore
-        this.__cleanStore();
-        //@ts-ignore
-        this.__setupStore();
-        //@ts-ignore
-        this.__updateSelected(false);
-        console.log("yyyyyy");
-      };
-      console.log("first tab slot", tabSlot);
-      if (tabSlot) {
-        tabSlot.addEventListener("slotchange", handleSlotChange);
-      }
+import { css, html, LitElement } from "lit";
+import { customElement } from "lit/decorators.js";
+@customElement("tab-item")
+export class TabItem extends LitElement {
+  static styles = css`
+    :host {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border: 1px solid transparent;
     }
-  }
+    :host(:hover),
+    :host([hover]) {
+      background-color: #f0f0f0;
+    }
+    :host([selected]) {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-bottom: 2px solid #007bff;
+      font-weight: bold;
+    }
+  `;
   render() {
-    return html`<slot data-slotName="tab"></slot>`;
+    return html`<slot></slot>`;
   }
 }
-
-customElements.define("tab-item", TabItem);

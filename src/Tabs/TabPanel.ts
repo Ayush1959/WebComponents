@@ -1,18 +1,18 @@
 import { LitElement, css, html } from "lit";
-import { property } from "lit/decorators.js";
-
-class TabPanel extends LitElement {
-  @property({ reflect: true })
-  slotName = "tab-panel";
+import { customElement } from "lit/decorators.js";
+@customElement("tab-panel")
+export class TabPanel extends LitElement {
   static styles = css`
     :host {
-      color: blue;
-      margin: 20px;
+      display: none;
+    }
+
+    :host([selected]) {
+      display: block;
     }
   `;
+
   render() {
     return html`<slot></slot>`;
   }
 }
-
-customElements.define("tab-panel", TabPanel);

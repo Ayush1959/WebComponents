@@ -27,6 +27,11 @@ export const ModeMixin = <T extends Constructor<LitElement>>(superClass: T) => {
             --color: white;
             --line-background: red;
           }
+          :host([mode="bright"]) {
+            --background: red;
+            --color: white;
+            --line-background: red;
+          }
         `,
       ];
     }
