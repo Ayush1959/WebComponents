@@ -18,8 +18,8 @@ export class Tabs extends LionTabs {
         :host {
           min-width: 250px;
           display: block;
-          background-color: white;
-          color: black;
+          background: var(--tabs-background, white);
+          color: var(--tabs-color, black);
         }
       `,
     ];

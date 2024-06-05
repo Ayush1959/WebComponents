@@ -6,8 +6,7 @@ export class TabList extends LitElement {
   static styles = css`
     :host {
       display: flex;
-      border-bottom: 2px solid #ccc;
-      margin-bottom: 1rem;
+      border-bottom: var(--tab-list-border-bottom, 1px solid #e0e0e0);
     }
   `;
   constructor() {

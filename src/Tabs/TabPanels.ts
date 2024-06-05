@@ -12,7 +12,7 @@ export class TabPanels extends LitElement {
 
   static styles = css`
     :host {
-      padding: 1rem;
+      padding: var(--tab-panels-padding, 16px);
     }
   `;
 
